@@ -9,6 +9,14 @@ registerMicroApps([
     entry: '//localhost:10001',  //默认reactApp启动的入口是10000端口
     activeRule: '/react', //默认reactApp的匹配规则是/react
     container: '#container', // 默认reactApp的挂载点是#container
+    loader,
+    props: { msg: 'hello world' }
+  },
+  {
+    name: 'vueApp',
+    entry: '//localhost:10002',
+    activeRule: '/vue',
+    container: '#container',
     loader
   }
 ], {//lifecycles

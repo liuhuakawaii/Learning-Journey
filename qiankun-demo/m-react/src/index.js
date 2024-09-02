@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
+let root;
 function render(props) {
   const container = props.container
-  const root = ReactDOM.createRoot(container ? container.querySelector('#root') : document.getElementById('root'));
+  root = ReactDOM.createRoot(container ? container.querySelector('#root') : document.getElementById('root'));
   root.render(
     <React.StrictMode>
       <App />
@@ -29,5 +30,5 @@ export async function mount(props) {
   render(props);
 }
 export async function unmount(props) {
-  console.log('[m-react] unmount', props);
+  root.unmount();
 }
