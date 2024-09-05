@@ -6,14 +6,14 @@ import { loadMicroApp } from "qiankun";
 function App() {
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    loadMicroApp({
-      name: 'm-static',
-      entry: '//localhost:10001',
-      container: containerRef.current,
-      props: { msg: 'hello world' }
-    })
-  }, [])
+  // useEffect(() => {
+  //   loadMicroApp({
+  //     name: 'm-static',
+  //     entry: '//localhost:10001',
+  //     container: containerRef.current,
+  //     props: { msg: 'hello world' }
+  //   })
+  // }, [])
   return (
     <div className="App">
       <BrowserRouter>
